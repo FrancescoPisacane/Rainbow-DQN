@@ -1,4 +1,4 @@
-# Rainbow-Ocean: Vectorized DQN Extensions
+# DQN Extensions, Rainbow algorithm
 
 A modular implementation of Deep Q-Networks (DQN) built with [PufferLib Ocean](https://puffer.ai/ocean.html), focusing on performance-enhancing extensions inspired by the "Rainbow" architecture.
 This project explores the impact of individual and combined algorithmic improvements on standard DQN agents.
