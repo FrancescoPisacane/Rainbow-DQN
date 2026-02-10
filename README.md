@@ -3,7 +3,7 @@
 A modular implementation of Deep Q-Networks (DQN) built with [PufferLib Ocean](https://puffer.ai/ocean.html), focusing on performance-enhancing extensions inspired by the "Rainbow" architecture.
 This project explores the impact of individual and combined algorithmic improvements on standard DQN agents.
 
-- **DQN Extensions:**
+**DQN Extensions:**
   - **Double DQN & Dueling DQN:** Architectural improvements to mitigate maximization bias and improve state-value estimation.
   - **Prioritized Experience Replay (PER):** Advanced sampling using a SumTree data structure to focus learning on high-information transitions.
   - **N-Step Returns:** Implementation of multi-step targets to balance bias and variance.
