@@ -1,12 +1,8 @@
 # Rainbow-Ocean: Vectorized DQN Extensions
 
 A modular implementation of Deep Q-Networks (DQN) built with [PufferLib Ocean](https://puffer.ai/ocean.html), focusing on performance-enhancing extensions inspired by the "Rainbow" architecture.
+This project explores the impact of individual and combined algorithmic improvements on standard DQN agents.
 
-## Overview
-This project explores the impact of individual and combined algorithmic improvements on standard DQN agents. The core focus is on utilizing vectorized environments to accelerate training and conducting a rigorous empirical analysis of how different components interact in varying environment complexities.
-
-## Key Features
-- **Vectorized Architecture:** Fully compatible with PufferLib's high-performance observation and environment handling.
 - **DQN Extensions:**
   - **Double DQN & Dueling DQN:** Architectural improvements to mitigate maximization bias and improve state-value estimation.
   - **Prioritized Experience Replay (PER):** Advanced sampling using a SumTree data structure to focus learning on high-information transitions.
@@ -23,11 +19,3 @@ Benchmarking was conducted across three tiers of the PufferLib Ocean suite:
 Contrary to naive expectations, the "Rainbow-lite" agent (combining all extensions) did not immediately outperform individual components in simpler environments like CartPole.
 - **Hyperparameter Conflict:** We identified critical interference between PER parameters ($\beta=0.8$) and reward clipping when combined with smaller buffer capacities.
 - **Complexity Trade-off:** Added complexity proved detrimental in low-dimensional spaces, while showing higher late-stage potential in complex environments like Breakout (reaching evaluation returns of ~250-300).
-
-## Usage
-The project is optimized for containerized development to ensure dependency consistency.
-
-### Docker Setup
-```bash
-docker pull ciemcornelissen/puffer-notebook:latest
-docker run -it --rm -p 8888:8888 -v "$(pwd)":/app ciemcornelissen/puffer-notebook:latest
